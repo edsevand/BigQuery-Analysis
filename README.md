@@ -22,7 +22,7 @@ order by
 
 ### Case 2 
 
-Fatality rate in Italy by mnth 2020
+Fatality rate in Italy by month 2020
 
 ```
 select
