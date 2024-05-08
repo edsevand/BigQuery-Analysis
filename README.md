@@ -75,5 +75,5 @@ LIMIT 10
 ```
 
 <p align="center">
-    <img src = "https://raw.githubusercontent.com/edsevand/BigQuery-Analysis/main/images/Case 3.jpeg">
+    <img src = "https://raw.githubusercontent.com/edsevand/BigQuery-Analysis/main/images/Case 3.png">
 </p>
