@@ -27,7 +27,8 @@ Fatality rate in Italy by mnth 2020
 ```
 select
   extract(month from `date`) as month,
-  sum(cumulative_deceased) as total_confirmed_cases, sum(cumulative_confirmed) as total_deaths,
+  sum(cumulative_deceased) as total_confirmed_cases,
+  sum(cumulative_confirmed) as total_deaths,
   avg(cumulative_deceased/cumulative_confirmed) * 100 case_fatality_ratio
 from
   bigquery-public-data.covid19_open_data.covid19_open_data
