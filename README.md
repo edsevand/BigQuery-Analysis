@@ -4,7 +4,7 @@ Identify responses to COVID-19 pandemic-related queries. Getting the right answe
 
 ### Case 1
 
-U.S states with the most confrimed cases per month
+U.S states with the most confirmed cases per month
 
 ```
 select
