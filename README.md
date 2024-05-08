@@ -45,7 +45,7 @@ order by
 
 ### Case 3
 
-Identifies days with a zero rate in the net new caseload
+Identifies days with most rate in the net new caseload
 
 ```
 WITH india_cases_by_date AS (
