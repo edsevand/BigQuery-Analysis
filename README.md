@@ -7,11 +7,17 @@ Identify responses to COVID-19 pandemic-related queries. Getting the right answe
 U.S states with the most confrimed cases per month
 
 ```
-select subregion1_name as State, count(cumulative_deceased) as total_confirmed_cases
-from bigquery-public-data.covid19_open_data.covid19_open_data
-where country_name = "United States of America"
-group by subregion1_name
-order by total_confirmed_cases desc;
+select
+  subregion1_name as State,
+  count(cumulative_deceased) as total_confirmed_cases
+from
+  bigquery-public-data.covid19_open_data.covid19_open_data
+where
+  country_name = "United States of America"
+group by
+  subregion1_name
+order by
+  total_confirmed_cases desc;
 ```
 
 ### Case 2 
@@ -19,11 +25,21 @@ order by total_confirmed_cases desc;
 Fatality rate in Italy by mnth 2020
 
 ```
-select extract(month from `date`) as month, sum(cumulative_deceased) as total_confirmed_cases, sum(cumulative_confirmed) as total_deaths, avg(cumulative_deceased/cumulative_confirmed) * 100 case_fatality_ratio
-from bigquery-public-data.covid19_open_data.covid19_open_data
-where country_name = "Italy" and cumulative_confirmed is not null and cumulative_confirmed > 0 and extract(year from `date`) = 2020
-group by month
-order by month asc;
+select
+  extract(month from `date`) as month,
+  sum(cumulative_deceased) as total_confirmed_cases, sum(cumulative_confirmed) as total_deaths,
+  avg(cumulative_deceased/cumulative_confirmed) * 100 case_fatality_ratio
+from
+  bigquery-public-data.covid19_open_data.covid19_open_data
+where
+  country_name = "Italy" and
+  cumulative_confirmed is not null and
+  cumulative_confirmed > 0 and
+  extract(year from `date`) = 2020
+group by
+  month
+order by
+  month asc;
 ```
 
 ### Case 3
