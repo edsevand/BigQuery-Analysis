@@ -72,7 +72,6 @@ FROM india_cases_by_date
 ORDER BY
   net_new_cases DESC
 LIMIT 10
-
 ```
 
 <p align="center">
